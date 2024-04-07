@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
 
-    <title>State of Florida - Miami</title>
+    <title>State of Florida - Contact</title>
   </head>
   <body>
     <div class="wrap">
@@ -35,15 +35,26 @@
           <br />
           <form id="myForm">
             <label for="firstname">First name: </label>
-            <input type="text" name="firstname" required />
+            <input id="firstname" type="text" name="firstname" placeholder="First Name" required />
             <br />
             <label for="lastname">Last name: </label>
-            <input type="text" name="lastname" required />
+            <input id="lastname" type="text" name="lastname" placeholder="Last Name" required />
             <br />
-            <label for="email">email: </label>
-            <input type="email" name="email" required />
+            <label for="email">E-mail: </label>
+            <input id="email" type="email" name="email" placeholder="E-mail" onfocusout="compare()" required />
             <br />
-
+            <label for="email">Confirm E-mail: </label>
+            <input id="cemail" type="email" name="email" placeholder="Confirm E-mail" onkeyup="compare()" required />
+            <br />
+            <div id="emailStatus">
+            <p>Your email address do not match. Please try again.</p>
+          </div>
+            
+            <label for="question">What is your question? </label>
+            <textarea id="question" cols="40" 
+            rows="5"  type="text"  name="question" placeholder="What is your question?" required ></textarea>
+            <br />
+            
             <br />
 
             <a class="submit action-button">Submit</a>
